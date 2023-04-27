@@ -11,7 +11,7 @@ public class Book09 {
     private int id;
     private String name;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name="std_id")
     private Student09 student; //student_id
 

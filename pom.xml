@@ -14,6 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <hibernate.version>5.6.8.Final</hibernate.version>
+        <!-- Added for Caching -->
+        <ecache.version>3.6.3</ecache.version>
 
         <postgresql.connector.version>42.3.6</postgresql.connector.version>
     </properties>
@@ -33,6 +35,20 @@
             <version>${postgresql.connector.version}</version>
         </dependency>
 
+        <!-- Added for Caching -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jcache</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <!-- Added for Caching -->
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ecache.version}</version>
+            <scope>runtime</scope>
+        </dependency>
 
     </dependencies>
 

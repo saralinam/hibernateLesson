@@ -24,12 +24,16 @@ public class RunnerFetch08 {
         Transaction tx = session.beginTransaction();
 
         //get student by id with get method
-        Student08 student1 = session.get(Student08.class, 1001);
-        System.out.println(student1);
+//        Student08 student1 = session.get(Student08.class, 1001);
+//        System.out.println(student1);
+
+        //get student by id with get method with id =1002
+        Student08 student2 = session.get(Student08.class, 1002);
 
         //get book by id with get method
-        Book08 book1 = session.get(Book08.class, 101);
-        System.out.println(book1);
+//        Book08 book1 = session.get(Book08.class, 101);
+//        System.out.println(book1);
+
 
 
 

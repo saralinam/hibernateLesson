@@ -1,17 +1,18 @@
-package hb11.criteriaapi;
+package hb13.get_load_methods;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="t_student11")
-public class Student11 {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Table(name = "t_student13")
+public class Student13 {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="std_name", nullable = false)
-    private String name;
 
+    @Column(name = "std_name", nullable = false)
+    private String name;
     private int grade;
+
 
     //getter-setter
 
@@ -19,9 +20,9 @@ public class Student11 {
         return id;
     }
 
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -38,11 +39,12 @@ public class Student11 {
     public void setGrade(int grade) {
         this.grade = grade;
     }
-    //toString
+    //to String()
+
 
     @Override
     public String toString() {
-        return "Student11{" +
+        return "Student13{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", grade=" + grade +

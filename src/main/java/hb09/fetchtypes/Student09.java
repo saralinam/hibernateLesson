@@ -4,6 +4,15 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+            1. if next side is Many then default is Lazy
+                OneToMany
+                ManyToMany
+            2. If next side is One then default is EAGER
+                ManyToOne
+                OneToOne
+         */
+
 @Entity
 
 @Table(name = "t_student09")
@@ -16,7 +25,7 @@ public class Student09 {
 
     private int grade;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Book09> bookList = new ArrayList<>();
 
     //getter-setter
